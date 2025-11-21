@@ -177,23 +177,6 @@ This file defines how Vivado should interpret and implement the MAC design in ha
 
 ---
 
-## 🏗️ Design Flow
-
-Here's how the files work together:
-
-```mermaid
-flowchart TD
-    tb[tb_spst.v (Testbench)]
-    mac[SPSTMAC.v (MAC Core)]
-    xdc[mac.xdc (Constraints)]
-    sim[Simulation]
-    synth[Synthesis/Impl.]
-
-    tb --> sim
-    mac --> sim
-    mac --> synth
-    xdc --> synth
-```
 
 **Summary:**
 - `tb_spst.v` tests `SPSTMAC.v` in simulation.
